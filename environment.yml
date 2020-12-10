@@ -1,0 +1,8 @@
+name: crawler
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - scrapy
+  - beautifulsoup4
+  - nltk
