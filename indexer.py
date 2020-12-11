@@ -19,7 +19,8 @@ def custom_tokenizer(text: str, tokenizer) -> list:
             continue
         while token[-1] == "-" or token[-1] == "'":
             token = token[:-1]
-        cleaned_tokens.append(token)
+        if 1 < len(token):
+            cleaned_tokens.append(token)
 
     return cleaned_tokens
 
@@ -32,7 +33,7 @@ def load_and_tokenize_documents(documents_folder='documents/', regex=TOKENIZING_
     '''
 
     if CACHE_DIR not in documents_folder:
-        documents_folder = os.path.join(CACHE_DIR,documents_folder)
+        documents_folder = os.path.join(CACHE_DIR, documents_folder)
 
     tokenizer = nltk.RegexpTokenizer(regex)
 
@@ -45,7 +46,7 @@ def load_and_tokenize_documents(documents_folder='documents/', regex=TOKENIZING_
             print(e)
             print(f'{documents_folder} should only contain integer directory names.')
             print(f'Please do not manual write anything into this directory. It should be entirely managed by the program')
-            continue ## skip this faulty directory name
+            continue  # skip this faulty directory name
 
         document_path = os.path.join(documents_folder, docID_dir)
 
@@ -73,7 +74,7 @@ def create_index(docs: dict, stem_index=True) -> dict:
     for docID in tqdm(docs):
         tokens = docs[docID]
         if stem_index:
-            tokens = stemmer.stem(tokens)
+            tokens = [stemmer.stem(t) for t in tokens]
 
         term_frequencies = dict(Counter(tokens))
         for term in term_frequencies:
@@ -91,8 +92,19 @@ def create_index(docs: dict, stem_index=True) -> dict:
 
 
 def main():
+
+    while True:
+        should_stem = input('Do you wish to stem your index? [Y]es/[N]o:').lower()
+        possible_values = ['y', 'yes', 'n', 'no']
+
+        if should_stem in possible_values:
+            break
+        else:
+            print('Please enter a correct response.')
+
+    should_stem = True if should_stem in ['y', 'yes'] else False
     docs = load_and_tokenize_documents()
-    index = create_index(docs, stem_index=False)
+    index = create_index(docs, stem_index=should_stem)
     utils.save_index(index)
     print(f'Index contains {len(index)} unique terms.')
 
