@@ -20,7 +20,14 @@ class ConcoSpider(scrapy.spiders.CrawlSpider):
             LinkExtractor(
                 deny=(
                     r'^(https://www.concordia.ca/fr)',  # the french website will ruin the index so ignore it
-                    r'^(?!https://www.concordia.ca).+',   # don't go to subdomains within concordia.ca because it could derail scraping
+                    r'^(?!https://www.concordia.ca).+', # don't go to subdomains within concordia.ca because it could derail scraping
+                    r'(sort=[a-z][A-Z]+)$',              # some pages allow sorting and we don't need each sort permutation (because we use bag of words model)
+                    # for some absurd reason concordia allows many empty pages for a given person search so ignore anything after 10 pages
+                    # https://www.concordia.ca/news/authors/j-cohen.html?page=940
+                    # https://www.concordia.ca/news/authors/j-cohen.html?page=937
+                    # https://www.concordia.ca/news/authors/j-cohen.html?page=938
+                    # https://www.concordia.ca/news/authors/j-cohen.html?page=856
+                    r'(page=[1-9][0-9]+)$',
                 ),
             ),
             follow=True,
