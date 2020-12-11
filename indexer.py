@@ -17,12 +17,17 @@ def custom_tokenizer(text: str, tokenizer, stem_doc=False) -> list:
     cleaned_tokens = []
 
     for token in tokens:
+
         if token == "":
             continue
+
         while token[-1] == "-" or token[-1] == "'":
             token = token[:-1]
-        if 1 < len(token):
-            token = stemmer.stem(token)
+
+        if 1 < len(token): # don't bother adding single letters to the index because the smallest lastnames should be >= 2 letters
+            token = token.lower()
+            if stem_doc:
+                token = stemmer.stem(token)
             cleaned_tokens.append(token)
 
     return cleaned_tokens
@@ -85,7 +90,8 @@ def create_index(docs: dict, ) -> dict:
             postings_dict[docID] = term_frequencies[term]
             index[term] = postings_dict
 
-    for term in index:
+    print('Sorting postings by term frequency')
+    for term in tqdm(index):
         postings_dict = index[term]
         postings_list = sorted(postings_dict.items(), reverse=True, key=lambda x: x[1])
         doc_frequency = len(postings_list)
