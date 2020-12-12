@@ -11,7 +11,7 @@ QUERY_TYPES = ['TF-IDF', 'BM25']
 
 def main():
     # Get index fle
-    idx_desired = input('Which index file do you wish to query (press enter for default inverted_index.txt):')
+    idx_desired = input('Which index file do you wish to query (press enter for default inverted_index.txt): ')
 
     if idx_desired == '':
         idx_desired = os.path.join(CACHE_DIR, INDEX_FILE)
@@ -22,7 +22,7 @@ def main():
 
     # determine if query should be stemmed
     while True:
-        should_stem = input('Is this a stemmed index? [Y]es/[N]o:').lower()
+        should_stem = input('Is this a stemmed index? [Y]es/[N]o: ').lower()
         possible_values = ['y', 'yes', 'n', 'no']
 
         if should_stem in possible_values:
@@ -30,7 +30,7 @@ def main():
         else:
             print('Please enter a correct response.')
 
-    query_prompt = "Specify which type of query you are making [1] TF-IDF [2] BM25:"
+    query_prompt = "Specify which type of query you are making [1] TF-IDF [2] BM25: "
     # for i, qtype in enumerate(QUERY_TYPES):
     #     query_prompt += f'[{i+1}] {qtype}\n'
 
@@ -123,7 +123,7 @@ def rank_documents(query_tokens, index, rank_type) -> list:
     '''
 
     eligible_docs = union_postings(query_tokens, index)
-    print(f'Ranking {len(eligible_docs)} eligible document.')
+    print(f'Ranking {len(eligible_docs)} eligible documents.')
     doc_rank_map = {}
     length_mapping: dict = collect_all_doc_lengths()
     L_avg, N = avg_doc_length_and_collection_size(length_mapping)
