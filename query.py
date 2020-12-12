@@ -44,7 +44,7 @@ def main():
             print(f'Please enter and integer between 1-{len(QUERY_TYPES)}.')
 
     # format the query appropriately
-    original_query = input('Please enter your query (keep in mind that casing is irrelevant):')
+    original_query = input('Please enter your query (keep in mind that casing is irrelevant): ')
     tokenizer = nltk.RegexpTokenizer(indexer.TOKENIZING_REGEX)
     query_tokens = indexer.custom_tokenizer(original_query, tokenizer, stem_doc=should_stem)
     index = utils.load_index(input_file=index_filename)

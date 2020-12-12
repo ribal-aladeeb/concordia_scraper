@@ -1,0 +1,298 @@
+*******************************************************
+query: water management sustainability Concordia
+type: tf-idf
+╭─░▒▓ ~/university/11_fall_2020/comp479/project4/concordia_scraper │ on main ⇡1 !1 ▓▒░·······································································································································································░▒▓ INT ✘ │ took 55s │ crawler 🐍 │ 2.4.1   ▓▒░
+╰─ py query.py
+Which index file do you wish to query (press enter for default inverted_index.txt):
+Is this a stemmed index? [Y]es/[N]o: y
+Specify which type of query you are making [1] TF-IDF [2] BM25: 1
+Please enter your query (keep in mind that casing is irrelevant): water management sustainability Concordia
+Loading index from cache/inverted_index.txt
+119924it [00:09, 13268.74it/s]
+
+Your formatted query is: water manag sustain concordia
+Ranking 22026 eligible documents.
+
+1.      Doc 977 with rank 128.802
+2.      Doc 2887        with rank 109.412
+3.      Doc 6086        with rank 78.729
+4.      Doc 12273       with rank 61.178
+5.      Doc 14936       with rank 60.13
+6.      Doc 14991       with rank 55.641
+7.      Doc 761 with rank 51.598
+8.      Doc 8620        with rank 45.516
+9.      Doc 3228        with rank 43.159
+10.     Doc 713 with rank 43.055
+11.     Doc 14895       with rank 42.726
+12.     Doc 698 with rank 42.656
+13.     Doc 3231        with rank 42.656
+14.     Doc 8410        with rank 42.328
+15.     Doc 3189        with rank 42.312
+
+View those documents in the browser by clicking on their corresponding URLs:
+
+1.      https://www.concordia.ca/academics/graduate/calendar/current/encs/engineering-courses.html
+2.      https://www.concordia.ca/students/gradproskills/about/catalogue.html
+3.      https://www.concordia.ca/artsci/research/loyola-sustainability/people.html
+4.      https://www.concordia.ca/cunews/main/stories/2016/03/21/world-water-day-govind-gopakumar-why-water-matters-worldwide.html?rootnav=news/stories
+5.      https://www.concordia.ca/cce/courses/schedule/april-2021.html
+6.      https://www.concordia.ca/cce/courses/schedule/january-2021.html
+7.      https://www.concordia.ca/campus-life/security/emergency/cert/erp.html
+8.      https://www.concordia.ca/jmsb/programs/undergraduate/bachelor/students/course-registration/worksheets.html
+9.      https://www.concordia.ca/about/sustainability/sustainability-initiatives/water.html
+10.     https://www.concordia.ca/cunews/main/stories/2015/04/14/sustainability-concordia-research-centres-future-earth.html?rootnav=news/stories
+11.     https://www.concordia.ca/cce/courses/schedule/june-2021.html
+12.     https://www.concordia.ca/cunews/main/stories/2013/06/12/refreshing-water-policy.html?c=/news/topic
+13.     https://www.concordia.ca/cunews/main/stories/2013/06/12/refreshing-water-policy.html
+14.     https://www.concordia.ca/cunews/offices/vprgs/sgs/public-scholars-20/2020/09/29/it-is-your-turn-to-make-concordia-better-than-you-find-it-today.html
+15.     https://www.concordia.ca/jmsb/faculty/michele-paulin.html
+
+
+*******************************************************
+query: water management sustainability Concordia
+type: bm25
+╭─░▒▓ ~/university/11_fall_2020/comp479/project4/concordia_scraper │ on main ⇡1 !1 ▓▒░···········································································································································································░▒▓ ✔ │ took 41s │ crawler 🐍 │ 2.4.1   ▓▒░
+╰─ py query.py
+Which index file do you wish to query (press enter for default inverted_index.txt):
+Is this a stemmed index? [Y]es/[N]o: y
+Specify which type of query you are making [1] TF-IDF [2] BM25: 2
+Please enter your query (keep in mind that casing is irrelevant): water management sustainability Concordia
+Loading index from cache/inverted_index.txt
+119924it [00:08, 13523.20it/s]
+
+Your formatted query is: water manag sustain concordia
+Ranking 22026 eligible documents.
+
+1.      Doc 12273       with rank 40.949
+2.      Doc 3228        with rank 40.306
+3.      Doc 3235        with rank 40.093
+4.      Doc 698 with rank 35.516
+5.      Doc 3231        with rank 35.496
+6.      Doc 696 with rank 32.379
+7.      Doc 3223        with rank 32.355
+8.      Doc 16213       with rank 31.866
+9.      Doc 15538       with rank 31.701
+10.     Doc 3237        with rank 31.003
+11.     Doc 2264        with rank 30.794
+12.     Doc 697 with rank 30.499
+13.     Doc 15656       with rank 30.11
+14.     Doc 692 with rank 30.04
+15.     Doc 695 with rank 30.04
+
+View those documents in the browser by clicking on their corresponding URLs:
+
+1.      https://www.concordia.ca/cunews/main/stories/2016/03/21/world-water-day-govind-gopakumar-why-water-matters-worldwide.html?rootnav=news/stories
+2.      https://www.concordia.ca/about/sustainability/sustainability-initiatives/water.html
+3.      https://www.concordia.ca/cunews/main/stories/2018/03/20/water_day_for_the_love_of_water_flow.html
+4.      https://www.concordia.ca/cunews/main/stories/2013/06/12/refreshing-water-policy.html?c=/news/topic
+5.      https://www.concordia.ca/cunews/main/stories/2013/06/12/refreshing-water-policy.html
+6.      https://www.concordia.ca/cunews/main/stories/2013/04/15/an-oasis-of-drinking-water-on-campus.html?c=/news/topic
+7.      https://www.concordia.ca/cunews/main/stories/2013/04/15/an-oasis-of-drinking-water-on-campus.html
+8.      https://www.concordia.ca/news/stories/2020/07/29/urban-water-consumption-will-increase-due-to-climate-change-concordia-research-shows.html?c=next-gen/cities
+9.      https://www.concordia.ca/cunews/main/stories/2013/04/15/an-oasis-of-drinking-water-on-campus.html?c=/artsci/research/loyola-sustainability/news/archive
+10.     https://www.concordia.ca/news/stories/2020/07/29/urban-water-consumption-will-increase-due-to-climate-change-concordia-research-shows.html
+11.     https://www.concordia.ca/cunews/main/stories/2014/06/18/can-a-universitycutitswaterconsumptionby20percentin3years.html?rootnav=news/stories
+12.     https://www.concordia.ca/cunews/main/stories/2013/05/15/a-vision-for-waters-future.html?c=/news/topic
+13.     https://www.concordia.ca/cunews/main/stories/2013/05/15/a-vision-for-waters-future.html?c=/artsci/research/loyola-sustainability/news/archive
+14.     https://www.concordia.ca/news/stories/2020/01/21/urban-water-consumption-will-increase-due-to-climate-change-concordia-research-shows.html?rootnav=news/stories
+15.     https://www.concordia.ca/news/stories/2020/01/21/urban-water-consumption-will-increase-due-to-climate-change-concordia-research-shows.html
+
+
+*******************************************************
+query: Concordia COVID-19 faculty
+type: tf-idf
+╭─░▒▓ ~/university/11_fall_2020/comp479/project4/concordia_scraper │ on main ⇡1 !1 ?1 ▓▒░···················································································································································································░▒▓ ✔ │ crawler 🐍 │ 2.4.1   ▓▒░
+╰─ py query.py
+Which index file do you wish to query (press enter for default inverted_index.txt):
+Is this a stemmed index? [Y]es/[N]o: y
+Specify which type of query you are making [1] TF-IDF [2] BM25: 1
+Please enter your query (keep in mind that casing is irrelevant): Concordia COVID-19 faculty
+Loading index from cache/inverted_index.txt
+119924it [00:08, 13693.03it/s]
+
+Your formatted query is: concordia covid faculti
+Ranking 22026 eligible documents.
+
+1.      Doc 12957       with rank 20.464
+2.      Doc 13244       with rank 18.335
+3.      Doc 13413       with rank 17.268
+4.      Doc 12920       with rank 17.253
+5.      Doc 1339        with rank 16.144
+6.      Doc 1320        with rank 15.099
+7.      Doc 16397       with rank 14.052
+8.      Doc 15889       with rank 14.024
+9.      Doc 12459       with rank 13.027
+10.     Doc 15793       with rank 12.995
+11.     Doc 15693       with rank 12.966
+12.     Doc 13419       with rank 12.966
+13.     Doc 10638       with rank 11.925
+14.     Doc 13262       with rank 11.898
+15.     Doc 13266       with rank 11.898
+
+View those documents in the browser by clicking on their corresponding URLs:
+
+1.      https://www.concordia.ca/research/perform/about/blog/20201009_ABCDs-of-COVID.html
+2.      https://www.concordia.ca/students/international/coronavirus.html
+3.      https://www.concordia.ca/coronavirus.html?utm_source=redirect&utm_campaign=covid19info
+4.      https://www.concordia.ca/cuevents/offices/vprgs/perform/2020/10/09/special-perform-colloquium--research-exploring-aging-behaviors-confinement-and-dating.html
+5.      https://www.concordia.ca/cunews/artsci/migs/newsletters/2020/May20.html?c=research/migs/news/notices
+6.      https://www.concordia.ca/cunews/artsci/migs/newsletters/2020/May20.html
+7.      https://www.concordia.ca/research/lifestyle-addiction/news/newsletter.html
+8.      https://www.concordia.ca/cunews/offices/vprgs/sgs/public-scholars-19/2020/04/14/micro-scale-technology-at-war-with-micro-scale-foe.html
+9.      https://www.concordia.ca/cunews/offices/advancement/2020/10/06/faculty-on-the-front-lines.html
+10.     https://www.concordia.ca/cunews/main/stories/2020/04/22/this-earth-day-6-concordians-discuss-the-question-of-sustainability-under-covid-19.html?c=artsci/loyola-college-diversity-sustainability/news/archive
+11.     https://www.concordia.ca/cunews/main/stories/2020/04/22/this-earth-day-6-concordians-discuss-the-question-of-sustainability-under-covid-19.html?c=artsci/loyola-college-diversity-sustainability/news
+12.     https://www.concordia.ca/news/stories/2020/09/15/global-covid-19-study-finds-a-strong-link-between-health-messaging-and-behaviour.html?c=/coronavirus
+13.     https://www.concordia.ca/about/administration-governance/office-chief-financial-officer/2020-21-budget.html
+14.     https://www.concordia.ca/coronavirus/wellbeing/symptoms/quarantine/checklist.html?utm_source=redirect&utm_campaign=checklist
+15.     https://www.concordia.ca/coronavirus/wellbeing/symptoms/quarantine/checklist.html
+
+
+*******************************************************
+query: Concordia COVID-19 faculty
+type: bm25
+╭─░▒▓ ~/university/11_fall_2020/comp479/project4/concordia_scraper │ on main ⇡1 !1 ?1 ▓▒░········································································································································································░▒▓ ✔ │ took 52s │ crawler 🐍 │ 2.4.1   ▓▒░
+╰─ py query.py
+Which index file do you wish to query (press enter for default inverted_index.txt):
+Is this a stemmed index? [Y]es/[N]o: y
+Specify which type of query you are making [1] TF-IDF [2] BM25: 2
+Please enter your query (keep in mind that casing is irrelevant): Concordia COVID-19 faculty
+Loading index from cache/inverted_index.txt
+119924it [00:08, 13584.70it/s]
+
+Your formatted query is: concordia covid faculti
+Ranking 22026 eligible documents.
+
+1.      Doc 12338       with rank 24.984
+2.      Doc 7898        with rank 19.609
+3.      Doc 13413       with rank 18.193
+4.      Doc 11087       with rank 17.951
+5.      Doc 7895        with rank 17.424
+6.      Doc 12957       with rank 15.218
+7.      Doc 13882       with rank 14.844
+8.      Doc 12342       with rank 14.787
+9.      Doc 12339       with rank 14.734
+10.     Doc 14239       with rank 14.351
+11.     Doc 11086       with rank 14.215
+12.     Doc 12920       with rank 14.0
+13.     Doc 13921       with rank 13.734
+14.     Doc 1339        with rank 13.613
+15.     Doc 7854        with rank 13.519
+
+View those documents in the browser by clicking on their corresponding URLs:
+
+1.      https://www.concordia.ca/research/aging/coronavirus/publications.html
+2.      https://www.concordia.ca/cunews/artsci/scpa/quescren/2020/04/28/open-letter-lettre-ouverte-language-langues-covid-19.html?c=artsci/scpa/quescren/resources/newsletter
+3.      https://www.concordia.ca/coronavirus.html?utm_source=redirect&utm_campaign=covid19info
+4.      https://www.concordia.ca/research/aging/coronavirus/resources.html
+5.      https://www.concordia.ca/cunews/artsci/scpa/quescren/2020/03/23/quescren-and-covid-19-quescren-a-l-heure-de-COVID-19.html?c=artsci/scpa/quescren/resources/newsletter
+6.      https://www.concordia.ca/research/perform/about/blog/20201009_ABCDs-of-COVID.html
+7.      https://www.concordia.ca/cunews/main/stories/2020/09/28/what-montreals-red-zone-covid-19-alert-means-for-concordia.html?c=/coronavirus
+8.      https://www.concordia.ca/research/aging/coronavirus.html
+9.      https://www.concordia.ca/research/aging/coronavirus/projects.html
+10.     https://www.concordia.ca/cunews/artsci/learning-performance/2020/04/08/andre-gagne.html?c=/research/learning-performance/news
+11.     https://www.concordia.ca/research/aging/coronavirus/media.html
+12.     https://www.concordia.ca/cuevents/offices/vprgs/perform/2020/10/09/special-perform-colloquium--research-exploring-aging-behaviors-confinement-and-dating.html
+13.     https://www.concordia.ca/cunews/artsci/azrieli/2020/11/16/institute-director-gave-a-talk-on-covid-s-affect-on-israel.html?c=/coronavirus
+14.     https://www.concordia.ca/cunews/artsci/migs/newsletters/2020/May20.html?c=research/migs/news/notices
+15.     https://www.concordia.ca/cunews/artsci/scpa/quescren/2020/04/28/open-letter-lettre-ouverte-language-langues-covid-19.html?c=/content/concordia/en/artsci/eapc/quescren/ressources/bulletin
+
+
+*******************************************************
+query: SARS-CoV Concordia faculty
+type: tf-idf
+╭─░▒▓ ~/university/11_fall_2020/comp479/project4/concordia_scraper │ on main ⇡1 !1 ?1 ▓▒░········································································································································································░▒▓ ✔ │ took 50s │ crawler 🐍 │ 2.4.1   ▓▒░
+╰─ py query.py
+Which index file do you wish to query (press enter for default inverted_index.txt):
+Is this a stemmed index? [Y]es/[N]o: y
+Specify which type of query you are making [1] TF-IDF [2] BM25: 1
+Please enter your query (keep in mind that casing is irrelevant): SARS-CoV Concordia faculty
+Loading index from cache/inverted_index.txt
+119924it [00:08, 13344.56it/s]
+
+Your formatted query is: sars-cov concordia faculti
+Ranking 22026 eligible documents.
+
+1.      Doc 15889       with rank 8.943
+2.      Doc 11980       with rank 5.983
+3.      Doc 11985       with rank 5.983
+4.      Doc 12100       with rank 5.983
+5.      Doc 13352       with rank 5.983
+6.      Doc 13879       with rank 5.969
+7.      Doc 12078       with rank 5.954
+8.      Doc 6073        with rank 3.09
+9.      Doc 11978       with rank 3.064
+10.     Doc 12104       with rank 3.064
+11.     Doc 150 with rank 3.059
+12.     Doc 13452       with rank 3.049
+13.     Doc 6060        with rank 3.046
+14.     Doc 13413       with rank 3.036
+15.     Doc 363 with rank 3.033
+
+View those documents in the browser by clicking on their corresponding URLs:
+
+1.      https://www.concordia.ca/cunews/offices/vprgs/sgs/public-scholars-19/2020/04/14/micro-scale-technology-at-war-with-micro-scale-foe.html
+2.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?rootnav=news/stories
+3.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html
+4.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?c=/ginacody/research/industry-4-0
+5.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?c=/ginacody/building-civil-environmental-eng/research/structural-safety-and-resilience/news
+6.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?c=/coronavirus
+7.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?c=/news/authors/justin-dupuis
+8.      https://www.concordia.ca/artsci/loyola-college-diversity-sustainability/programs/courses/LCDSMembershipCourses.html
+9.      https://www.concordia.ca/cunews/encs/2020/11/20/Funding-for-ultrasound-technology-research.html?c=/ginacody/research/health
+10.     https://www.concordia.ca/cunews/encs/2020/11/20/Funding-for-ultrasound-technology-research.html?c=/ginacody/research/industry-4-0
+11.     https://www.concordia.ca/news/topic.html?topic=topics:research_subjects/technology
+12.     https://www.concordia.ca/cunews/encs/2020/11/20/Funding-for-ultrasound-technology-research.html?c=/artsci/biology
+13.     https://www.concordia.ca/artsci/loyola-college-diversity-sustainability/programs/courses/LCDSElectives.html
+14.     https://www.concordia.ca/coronavirus.html?utm_source=redirect&utm_campaign=covid19info
+15.     https://www.concordia.ca/ginacody/building-civil-environmental-eng.html
+
+
+*******************************************************
+query: SARS-CoV Concordia faculty
+type: bm25
+╭─░▒▓ ~/university/11_fall_2020/comp479/project4/concordia_scraper │ on main ⇡1 !1 ?1 ▓▒░···············································································································································································░▒▓ INT ✘ │ crawler 🐍 │ 2.4.1   ▓▒░
+╰─ py query.py
+Which index file do you wish to query (press enter for default inverted_index.txt):
+Is this a stemmed index? [Y]es/[N]o: y
+Specify which type of query you are making [1] TF-IDF [2] BM25: 2
+Please enter your query (keep in mind that casing is irrelevant): SARS-CoV Concordia faculty
+Loading index from cache/inverted_index.txt
+119924it [00:08, 13621.10it/s]
+
+Your formatted query is: sars-cov concordia faculti
+Ranking 22026 eligible documents.
+
+1.      Doc 15889       with rank 7.853
+2.      Doc 13879       with rank 6.648
+3.      Doc 12078       with rank 6.525
+4.      Doc 13352       with rank 6.499
+5.      Doc 11980       with rank 6.453
+6.      Doc 11985       with rank 6.453
+7.      Doc 12076       with rank 6.38
+8.      Doc 12100       with rank 6.277
+9.      Doc 5263        with rank 5.703
+10.     Doc 6103        with rank 5.574
+11.     Doc 13343       with rank 5.229
+12.     Doc 363 with rank 5.168
+13.     Doc 15742       with rank 4.908
+14.     Doc 11827       with rank 4.438
+15.     Doc 149 with rank 4.167
+
+View those documents in the browser by clicking on their corresponding URLs:
+
+1.      https://www.concordia.ca/cunews/offices/vprgs/sgs/public-scholars-19/2020/04/14/micro-scale-technology-at-war-with-micro-scale-foe.html
+2.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?c=/coronavirus
+3.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?c=/news/authors/justin-dupuis
+4.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?c=/ginacody/building-civil-environmental-eng/research/structural-safety-and-resilience/news
+5.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?rootnav=news/stories
+6.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html
+7.      https://www.concordia.ca/news/authors/justin-dupuis.html
+8.      https://www.concordia.ca/news/stories/2020/11/02/concordia-researchers-build-web-based-tool-to-reduce-risk-of-indoor-sars-cov2-transmission.html?c=/ginacody/research/industry-4-0
+9.      https://www.concordia.ca/ginacody/research/spnet/news.html?page=2
+10.     https://www.concordia.ca/ginacody/research/green-seam/news.html?page=2
+11.     https://www.concordia.ca/ginacody/building-civil-environmental-eng/research/structural-safety-and-resilience/news.html
+12.     https://www.concordia.ca/ginacody/building-civil-environmental-eng.html
+13.     https://www.concordia.ca/cunews/artsci/loyola-college/2020/06/04/lcds-to-offer-new-course-in-diversity-and-sustainability-in-the-.html?c=artsci/loyola-college-diversity-sustainability/news/notices
+14.     https://www.concordia.ca/ginacody/research/industry-4-0.html
+15.     https://www.concordia.ca/news/topic.html?topic=topics:academic_disciplines/engineering
