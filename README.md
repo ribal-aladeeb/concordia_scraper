@@ -2,7 +2,7 @@
 
 Scrape https://www.concordia.ca and create a queriable inverted index. Please
 note that the conventions for robot exclusion have been respected. You can see
-[line 87](https://github.com/ribal-aladeeb/concordia_scraper/blob/5b4ee54d904670aa1a8c9e5f1e9b18450607507f/crawl.py#L87)
+[line 87](https://github.com/ribal-aladeeb/concordia_scraper/blob/18428ad2d2926c626630ed5dbb9c86f331bc23ed/crawl.py#L87)
 of the crawler module.
 
 # Environment and Dependencies
