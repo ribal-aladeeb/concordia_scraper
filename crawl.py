@@ -7,10 +7,11 @@ import logging
 import os
 import utils
 import sys
+from utils import CACHE_DIR
 
 
 class ConcoSpider(scrapy.spiders.CrawlSpider):
-    documents_folder = 'documents'
+    documents_folder = os.path.join(CACHE_DIR,'documents')
     name = 'ConcordiaSpider'
     results_filename = 'url_scraped.txt'
     allowed_domains = ['www.concordia.ca']
