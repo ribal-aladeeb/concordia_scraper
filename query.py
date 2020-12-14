@@ -110,6 +110,8 @@ def union_postings(terms, index):
     accumulator = set()
     for t in terms:
         postings_list = index.get(t, [])
+        if len(postings_list)==0:
+            continue
         for pair in postings_list[1]:  # slice because the first element is df
             docID, _ = pair             # pair = (docID, tf)
             accumulator.add(docID)

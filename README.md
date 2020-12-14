@@ -97,12 +97,44 @@ of words and only keeps their root. Stemming helps in acheiving a better recall
 which helps in retreiving a larger portion of the documents that are relevant to
 your queries. The first thing to note is that stemming will roughly increase the
 runtime of indexing by a factor of 8. This is not very problematic if you
-haven't scraped lots of documents. However, if you do scrape tens of thousands of
-documents this will be the difference between seconds and minutes of indexing.
-The second thing to note is that you need to remember whether your index was
-stemmed when querying later on.
+haven't scraped lots of documents. However, if you do scrape tens of thousands
+of documents this will be the difference between seconds and minutes of
+indexing. The second thing to note is that you need to remember whether your
+index was stemmed when querying later on. You could create a stemmed and
+unstemmed index and experiment with queries and comparing results with both
+indices. Just remember that running the indexer will create
+`cache/inverted_index.txt`. If the file already exists it will be overwritten.
+simply `cp cache/invertex_index.txt cache/stemmed_index.txt` and recreate your
+index without stemming. Then `cp cache/inverted_index.txt
+cache/unstemmed_index.txt`. When querying you will be able to specify an index
+file different from the default one.
 
+## Running Queries
+When you run `python query.py`, the script will generate multiple prompts to configure your query.
+```
+Which index file do you wish to query (press enter for default inverted_index.txt):
+```
+Here you can speficy the file or just press enter for the default one.
+```
+Is this a stemmed index? [Y]es/[N]o:
+```
+Then you make sure to indicate correctly if the file contains a stemmed index.
+```
+Specify which type of query you are making [1] TF-IDF [2] BM25:
+```
+These are two ways of ranking documents. To learn about information retrieval
+and NLP you can visit the [Stanford NLP
+textbook](https://nlp.stanford.edu/IR-book/information-retrieval-book.html) (for
+free yay). To read specifically about these two ranking techniques feel free to
+check out the chapters relating to
+[TF-IDF](https://nlp.stanford.edu/IR-book/html/htmledition/tf-idf-weighting-1.html)
+and
+[BM25](https://nlp.stanford.edu/IR-book/html/htmledition/okapi-bm25-a-non-binary-model-1.html)
+to understand the differences between these two ranking schemes.
+```
+Please enter your query (keep in mind that casing is irrelevant):
+```
+And finally you can type your query.
 
-
-
-
+The top 15 documents IDs and their ranking score will be displayed, as well as
+their URLs, so that you may visit the webpages to view your search results.
